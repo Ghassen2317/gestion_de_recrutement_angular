@@ -1,0 +1,39 @@
+.body{
+    width: 100%;
+    height: 90vh;
+    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.text{
+  
+    width: 600px;
+    font-family: inter;
+    
+}
+
+p{
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+h1{
+   
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* .video{
+    width: 10px;
+    height: 10px;
+} */
+/* img{
+    border-radius: 70px 20px;
+    width: 450px;
+    height: 400px;
+    
+} */

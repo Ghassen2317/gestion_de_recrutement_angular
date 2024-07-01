@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Job Offer Form</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-control {
+      padding: 15px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .form-floating-label {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-floating-label input:focus,
+    .form-floating-label select:focus,
+    .form-floating-label textarea:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+    }
+
+    .form-floating-label input:not(:placeholder-shown) + label,
+    .form-floating-label select:not(:placeholder-shown) + label,
+    .form-floating-label textarea:not(:placeholder-shown) + label,
+    .form-floating-label input:focus + label,
+    .form-floating-label select:focus + label,
+    .form-floating-label textarea:focus + label {
+      top: -10px;
+      left: 15px;
+      font-size: 0.85rem;
+      color: #008080;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="form-container">
+        <form [formGroup]="offerForm" (ngSubmit)="ngonSubmit()" class="p-4">
+          <div class="form-floating mb-3">
+            <input type="text" id="nomOffreEmploi" formControlName="nomOffreEmploi" class="form-control" placeholder="Nom de la poste" required>
+            <label for="nomOffreEmploi">Nom de l'offre :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" id="nomEntreprise" formControlName="nomEntreprise" class="form-control" placeholder="Nom de l'entreprise" required>
+            <label for="nomEntreprise">Nom de l'entreprise :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select id="typeContrat" formControlName="typeContrat" class="form-select" required>
+              <option value="" disabled selected hidden>Choisir le type de contrat</option>
+              <option value="temps-plein">CDD</option>
+              <option value="temps-partiel">CIVP</option>
+              <option value="contrat-duree-determinee">KARAMA</option>
+              <option value="contrat-duree-determinee">STAGE</option>
+            </select>
+            <label for="typeContrat">Type de contrat :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="date" id="publicationDate" formControlName="publicationDate" class="form-control" placeholder="Date de publication" required>
+            <label for="publicationDate">Date de publication :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="date" id="datePublication" formControlName="datePublication" class="form-control" placeholder="Date d'expiration" required>
+            <label for="datePublication">Date d'expiration :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea id="description" formControlName="description" class="form-control" placeholder="Description" rows="4" required></textarea>
+            <label for="description">Description :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select id="region" formControlName="region" class="form-select" required>
+              <option value="" disabled selected hidden>Choisir une région</option>
+              <option value="ariana">Ariana</option>
+              <option value="beja">Béja</option>
+              <option value="ben-arous">Ben Arous</option>
+              <option value="bizerte">Bizerte</option>
+              <option value="gabes">Gabès</option>
+              <option value="gafsa">Gafsa</option>
+              <option value="jendouba">Jendouba</option>
+              <option value="kairouan">Kairouan</option>
+              <option value="kasserine">Kasserine</option>
+              <option value="kebili">Kebili</option>
+              <option value="kef">Le Kef</option>
+              <option value="mahdia">Mahdia</option>
+              <option value="manouba">La Manouba</option>
+              <option value="medenine">Médenine</option>
+              <option value="monastir">Monastir</option>
+              <option value="nabeul">Nabeul</option>
+              <option value="sfax">Sfax</option>
+              <option value="sidi-bouzid">Sidi Bouzid</option>
+              <option value="siliana">Siliana</option>
+              <option value="sousse">Sousse</option>
+              <option value="tataouine">Tataouine</option>
+              <option value="tozeur">Tozeur</option>
+              <option value="tunis">Tunis</option>
+              <option value="zaghouan">Zaghouan</option>
+            </select>
+            <label for="region">Région :</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select id="nbExperienceOffre" formControlName="nbExperienceOffre" class="form-select" required>
+              <option value="" disabled selected hidden>Choisir le nombre d'années d'expérience</option>
+              <option value="0-1">0-1 an</option>
+              <option value="1-3">1-3 ans</option>
+              <option value="3+">3+ ans</option>
+            </select>
+            <label for="nbExperienceOffre">Nombre d'années d'expérience :</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+ 

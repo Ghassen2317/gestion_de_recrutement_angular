@@ -1,0 +1,58 @@
+<div class="container-fluid" style="background-color: #008080; height: 100vh;">
+    <div class="row justify-content-center align-items-center" style="height: 100%;">
+      <div class="col-md-6">
+        <div class="card p-4" style="background-color: rgba(255, 255, 255, 0.7);"> <!-- Fond de la carte semi-transparent -->
+          <form [formGroup]="rhForm" (ngSubmit)="onSubmit()">
+            <!-- Prénom -->
+            <div class="mb-3">
+              <label for="firstName" class="form-label">Prénom :</label>
+              <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="Entrez le prénom de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+            </div>
+  
+            <!-- Nom -->
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Nom :</label>
+              <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Entrez le nom de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+            </div>
+  
+            <!-- Matricule -->
+            <div class="mb-3">
+              <label for="matricule" class="form-label">Matricule :</label>
+              <input type="text" id="matricule" formControlName="matricule" class="form-control" placeholder="Entrez la  matricule de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+            </div>
+  
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email :</label>
+              <input type="email" id="email" formControlName="email" class="form-control" placeholder="Entrez l'email de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+            </div>
+            <div class="mb-3">
+              <label for="entrepriseId" class="form-label">   Id:</label>
+              <input type="text" id="entrepriseId" formControlName="entrepriseId" class="form-control" placeholder="Entrez l'identifiant de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+            </div>
+  
+            <!-- Mot de passe -->
+            <div class="mb-3">
+              <label for="motDePasse" class="form-label">Mot de passe :</label>
+              <input type="motDePasse" id="motDePasse" formControlName="motDePasse" class="form-control" placeholder="Entrez votre mot de passe" style="background-color: rgba(241, 233, 233, 0.9);">
+            </div>
+  
+            <!-- Bouton de soumission -->
+            <!-- <button type="submit" class="btn btn-primary">Ajouter RH</button>
+            <button type="button" class="btn btn-outline-info">Info</button> -->
+            <button type="button" class="btn btn-outline-primary">Ajouter RH</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+

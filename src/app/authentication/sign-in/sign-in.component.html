@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="sign-in.component.css">
+    <style>
+        /* Styles personnalisés pour centrer le contenu */
+        .vertical-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Ajouté pour centrer horizontalement */
+            height: 100vh; /* Ajustez la hauteur selon vos besoins */
+        }
+
+        .form-container {
+            max-width: 800px; /* Augmentez la largeur maximale du formulaire */
+            margin: auto; /* Centre le formulaire horizontalement */
+            background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond du formulaire */
+            padding: 40px; /* Espacement intérieur du formulaire */
+            border-radius: 10px; /* Arrondi des coins du formulaire */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        }
+
+        .my-5 {
+            margin-bottom: 2rem; /* Ajuste l'espacement du titre vers le bas */
+        }
+
+        .mb-5 {
+            margin-bottom: 2rem; /* Ajuste l'espacement des colonnes */
+        }
+
+        .separator {
+            margin: 15px 0; /* Espacement vertical autour du séparateur */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section class="background-radial-gradient overflow-hidden">
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5 vertical-center">
+                <div class="row gx-lg-5 align-items-center mb-5">
+                    <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                        <!-- Titre centré -->
+                        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(236, 45%, 37%)">
+                            Votre succès <br>
+                            <span style="color: hsl(236, 81%, 11%)">commence ici.</span>
+                        </h1>
+                    </div>
+
+                    <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                        <!-- Formulaire centré -->
+                        <div class="card bg-glass form-container">
+                            <div class="card-body px-4 py-5 px-md-5 text-center"> <!-- Ajout de text-center ici -->
+                                <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" id="email" class="form-control" formControlName="email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="motDePasse" class="form-label">Mot de passe</label>
+                                        <input type="password" id="motDePasse" class="form-control" formControlName="motDePasse">
+                                    </div>
+                                    <!-- Utilisation de text-center pour centrer les boutons -->
+                                    <div class="mb-3 text-center">
+                                        <button type="submit" class="btn btn-primary" routerLink="">Connexion</button>
+                                    </div>
+                                    <div class="separator">ou</div> <!-- Ajout du séparateur -->
+                                    <div class="mb-3 text-center">
+                                        <button type="button" class="btn btn-primary" routerLink="/sign-up">S'inscrire</button>
+                                    </div>
+                                    <div class="mt-3 text-center">
+                                        <a routerLink="/reset-password">Mot de passe oublié ?</a>
+                                    </div>
+                                    <div class="mt-3 text-center">
+                                        <a routerLink="/home">Retour</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
