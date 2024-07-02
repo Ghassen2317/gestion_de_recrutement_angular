@@ -1,1 +1,51 @@
-<p>dashboard works!</p>
+<div style="width: 100%; display: flex;position: fixed;">
+  <div>
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="dashboard">
+    <h2>Tableau de bord</h2>
+    <!-- ============= Top 3 Cards ======== -->
+    <div class="topStatics">
+      <div class="card">
+        <div class="card-icon blue">
+          <i class="bi bi-people"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-label">Candidatures Totales</div>
+          <div class="card-number">{{ totalApplications }}</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon green">
+          <i class="bi bi-person-bounding-box"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-label">Candidats Présélectionnés</div>
+          <div class="card-number">{{ preselectedCandidates }}</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon red">
+          <i class="bi bi-person-x"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-label">Candidats Rejetés</div>
+          <div class="card-number">{{ rejectedApplications }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============= Charts ======== -->
+    <div class="charts">
+      
+      <div class="line" [chart]="barChart"></div>
+      <div class="form-group">
+        <div class="pie" [chart]="pieChart"></div>
+        <div class="line" [chart]="lineChart"> </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
