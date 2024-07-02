@@ -1,0 +1,126 @@
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+.app-sidebar {
+  flex: 0 0 250px; /* Fixed width sidebar */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.dashboard {
+  flex: 1; /* Flex to fill remaining space */
+  height: 100vh;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  padding: 20px;
+  background-color: #cce5e5;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #333333;
+}
+
+.topStatics {
+  display: flex;
+  flex-wrap: wrap; /* Ensure cards wrap to next line if space is limited */
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #ffffff80;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust width as needed */
+  max-width: 300px; /* Max width for responsiveness */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: -20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon.blue {
+  background-color: #ffc800e0;
+}
+
+.card-icon.green {
+  background-color: #28a746d1;
+}
+
+.card-icon.red {
+    
+  background-color: #dc3546c9;
+}
+.card-content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card-label {
+  font-family: inter;
+  font-weight: bold;
+  font-size: 14px;
+  color: #666666;
+}
+
+.card-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+
+
+
+.bar{
+  /*flex: 1;  Equal width for charts */
+  
+  box-shadow: 10px 10px 5px #aaaaaa;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 8px;
+}
+
+.pie{
+  box-shadow: 10px 10px 5px #aaaaaa;
+  /* width: 400px; */
+  margin-right: 40px;
+  border-radius: 8px;
+}
+
+.line{
+  box-shadow: 10px 10px 5px #aaaaaa;
+  border-radius: 8px;
+  
+}
+
+.form-group{
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+}
+

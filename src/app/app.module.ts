@@ -1,13 +1,17 @@
-import { NgModule  } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NavbarComponent } from '../app/components/navbar/navbar.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NavbarComponent} from '../app/components/navbar/navbar.component';
 import{HeroComponent} from '../app/home/hero/hero.component';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {HomePageComponent} from '../app/home/home-page/home-page.component';
 import {CarouselComponent} from '../app/home/carousel/carousel.component';
 import {FooterComponent} from '../app/components/footer/footer.component';
 import {PacksComponent} from '../app/espace-entreprise/packs/packs.component';
+import {SidebarComponent} from '../app/components/sidebar/sidebar.component';
+import {DashboardComponent} from '../app/components/dashboard/dashboard.component';
+import { ChartModule } from 'angular-highcharts';
+ 
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -36,6 +40,8 @@ const routes: Routes = [
     CarouselComponent,
     FooterComponent,
     PacksComponent,
+    SidebarComponent,
+    DashboardComponent,
     SigninComponent,
     SignUpComponent,
     ResetPasswordComponent,
@@ -49,6 +55,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChartModule
+    
    BrowserModule,
    
    RouterModule.forRoot(routes),

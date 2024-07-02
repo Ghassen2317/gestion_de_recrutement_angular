@@ -33,15 +33,17 @@ body {
 
 .footer-section h2 {
     margin-top: 27px;
-    color: #ffc600;
+    color: #ffffff;
     font-size: 1.5em;
     margin-bottom: 20px;
+    font-family: inter;
 }
 
 .footer-section p, .footer-section a {
     color: #ccc;
     text-decoration: none;
     line-height: 1.8;
+    font-family: inter;
 }
 
 .footer-section a:hover {
@@ -59,3 +61,29 @@ body {
     color: #ffffff;
     font-size: 0.9em;
 }
+
+.company-info{
+    margin-top:93px;
+}
+
+.quick-links{
+    margin-top: 93px;
+}
+
+.social-media{
+    margin-top: 93px;
+}
+
+.footer-section  ul{
+    list-style: none;
+
+}
+
+.footer-section.quick-links a i {
+    margin-right: 8px;
+}
+
+.footer-section.social-media a i {
+    margin-right: 8px; 
+}
+

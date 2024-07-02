@@ -1,39 +1,62 @@
-.body{
+.body {
     width: 100%;
     height: 90vh;
     background-color: #dfdfdf;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* Added to allow wrapping */
 }
 
-
-.text{
-  
+.text {
     width: 600px;
     font-family: inter;
-    
+    margin-bottom: 20px; /* Added to give space between text and video on small screens */
 }
 
-p{
+p {
     margin-left: 25px;
     font-size: 18px;
     font-weight: bold;
-    
 }
-h1{
-   
+
+h1 {
     font-size: 48px;
     font-weight: bold;
 }
 
-/* .video{
-    width: 10px;
-    height: 10px;
-} */
-/* img{
-    border-radius: 70px 20px;
-    width: 450px;
-    height: 400px;
+.video video {
+    max-width: 100%; /* Ensure the video scales properly on small screens */
+    height: auto;
     
-} */
+}
+
+/* Media query for responsive design at 980px and below */
+@media (max-width: 960px) {
+    .body {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center;
+    }
+
+    .text {
+        width: 90%; /* Reduce the width for smaller screens */
+        text-align: center; /* Center-align text */
+    }
+
+    .text p, .text .btn {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+
+    .text h1 {
+        font-size: 36px; /* Reduce heading size */
+    }
+
+    .text p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .video video {
+        width: 100%; /* Ensure the video takes full width on smaller screens */
+        height: auto;
+    }
+}
