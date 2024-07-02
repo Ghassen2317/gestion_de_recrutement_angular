@@ -1,11 +1,11 @@
 export const navbarData= [
     {
-        routelink:"/dashbord",
+        routelink:"/dashboard",
         icon:'bi bi-grid',
         label:'Tableau de bord'  
     },
     {
-        routelink:"/DashbordComponent/ListebornesComponent",
+        routelink:"/offerForm",
         icon:'bi bi-briefcase',
         label:'Publier Offres' 
     },

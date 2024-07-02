@@ -35,10 +35,11 @@ export class OfferFormComponent {
   }
 
   ngonSubmit() {
-    if (this.offerForm.valid) {
+    console.log(this.offerForm.valid)
+    if (this.offerForm.value) {
       // Envoyer les données au backend ou traiter localement
       const formData = this.offerForm.value;
-      this.router.navigate(['/offer-card'], { state: { formData } });
+      this.router.navigate(['/offerCard'], { state: { formData } });
      
     }
   }

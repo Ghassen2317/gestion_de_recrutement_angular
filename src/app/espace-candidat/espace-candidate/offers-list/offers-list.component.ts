@@ -6,13 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./offers-list.component.css']
 })
 export class OfferListComponent {
-  filteredOffers: any[] = []; // Adapter le type selon vos besoins
+  offers = [
+    { id: 1, title: 'Offre 1', description: 'Description de l\'offre 1' },
+    { id: 2, title: 'Offre 2', description: 'Description de l\'offre 2' },
+    { id: 3, title: 'Offre 3', description: 'Description de l\'offre 3' },
+    // Ajoutez autant d'offres que nécessaire
+  ];
 
-  filterByTypeContrat(selectedTypesContrats: string[]): void {
-    // Implémentez la logique pour filtrer les offres par type de contrat sélectionné
-    // Vous pouvez par exemple appeler un service qui retourne les offres filtrées
-    console.log('Filtrer par type de contrat:', selectedTypesContrats);
-    // Exemple de logique de filtrage:
-    // this.filteredOffers = this.offers.filter(offer => selectedTypesContrats.includes(offer.typeContrat));
+  constructor() { }
+
+  ngOnInit(): void {
+    // Vous pouvez laisser cette méthode vide pour une liste statique
   }
 }

@@ -1,4 +1,4 @@
-.filter-container {
+/* .filter-container {
     padding: 15px;
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -14,4 +14,39 @@
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
+  } */
+
+  .container{
+    display: flex;
   }
+
+  .filter {
+    margin-left: 200px;
+    /* margin-right: 20px;  */
+  }
+  .offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 100px;
+   
+  }
+  
+  .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    color: #555;
+  }
+  

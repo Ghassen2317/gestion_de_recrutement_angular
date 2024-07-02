@@ -22,4 +22,19 @@
       </div>
     </div>
   </div> -->
-   
+<div class="container">
+  <div class="filter">
+    <app-offer-filter></app-offer-filter>
+  </div>
+  <div class="offer-list" >
+    <div *ngIf="offers && offers.length > 0; else noOffers" >
+      <div *ngFor="let offer of offers" class="card" >
+        <h2>{{ offer.title }}</h2>
+        <p>{{ offer.description }}</p>
+      </div>
+    </div>
+    <ng-template #noOffers>
+      <p>Aucune offre disponible pour le moment.</p>
+    </ng-template>
+  </div>
+</div>
