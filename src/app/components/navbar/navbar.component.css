@@ -10,14 +10,19 @@ nav{
 }
 
 img{
-
-    width: 50% ;
-    height: 55px;
+    width: 100px; 
+    height: 90px;
     margin-right: 18px;
+    margin-bottom: -27px;
+    margin-top: -10px;
 
 }
+
+img:hover{
+    filter: invert(34%) sepia(89%) saturate(493%) hue-rotate(132deg) brightness(96%) contrast(103%);
+}
 .nav-item{
-    
+    padding-right: 15px;
     font-family: inter;
 }
 
@@ -56,3 +61,13 @@ a:hover{
     background-color: #ffe173f6;
 }
 
+.bi {
+    font-size: 32px;
+    /* padding-left: 10px; */
+    cursor: pointer;
+    color: #008080;
+    cursor: pointer;
+  }
+  .sidebarbouton{
+    margin-right: 660px;
+  }

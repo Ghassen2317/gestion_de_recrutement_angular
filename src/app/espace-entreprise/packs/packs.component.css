@@ -11,14 +11,19 @@
 }
 
 .card {
-    border: 1px solid #ddd;
+    border: 1px solid #b6b4b4;
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
     margin-top: 60px;
+    background-color:#dfdfdf ;
 }
 
 .card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
+    background-color: #ffffff;
+    
+    
 }
 
 .card-title {
@@ -28,16 +33,19 @@
 }
 
 .card-price {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-weight: 600;
-    color: #007bff;
-    margin-bottom: 0.5rem;
+    color: #000000;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
+
 
 .card-price span {
     font-size: 0.875rem;
     color: #6c757d;
     font-weight: normal;
+    
 }
 
 .card-text {
@@ -47,12 +55,22 @@
 ul.fa-ul {
     list-style-type: none;
     padding-left: 0;
+    margin-left: -9px;
+    text-align: left;
+    
+    
 }
+
+
+
 
 ul.fa-ul li {
     position: relative;
-    padding-left: 2em;
+    padding-top: 5px;
     margin-bottom: 0.5em;
+    padding-left: 38px;
+    
+    
 }
 
 ul.fa-ul li .fa-li {
@@ -61,15 +79,25 @@ ul.fa-ul li .fa-li {
     top: 0.25em;
 }
 
+.fas{
+    color: #dfdfdf;
+    background-color: #008080;
+     border-radius: 20px;
+     padding: 2px;
+}
+
 /* Boutons */
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: transparent;
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 30px;
+    color: #000000;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #008080;
+    border-color: #008080;
 }
 
 .btn-outline-primary {
@@ -84,18 +112,20 @@ ul.fa-ul li .fa-li {
 }
 
 .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
+    border-radius: 20px;
+    background-color: #008080;
+    border-color: #008080;
 }
 
 .btn-success:hover {
-    background-color: #218838;
-    border-color: #218838;
+    background-color: #015050;
+    border-color: #015050;
 }
 
 .btn-warning {
-    background-color: #ffc107;
-    border-color: #ffc107;
+    border-radius: 20px;
+    background-color: #ffc600;
+    border-color: #ffc600;
 }
 
 .btn-warning:hover {
@@ -108,4 +138,10 @@ ul.fa-ul li .fa-li {
     background-color: #007bff;
     color: #fff;
     font-weight: bold;
+}
+
+.loginboutons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 110px;
 }
