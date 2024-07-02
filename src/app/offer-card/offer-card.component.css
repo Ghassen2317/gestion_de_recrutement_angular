@@ -1,0 +1,19 @@
+.card {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .card-title {
+    color: #008080;
+    font-weight: bold;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  

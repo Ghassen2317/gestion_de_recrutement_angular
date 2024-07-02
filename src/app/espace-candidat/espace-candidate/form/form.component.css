@@ -1,0 +1,13 @@
+.container-fluid {
+    background-color: #f1e9e9;
+    height: 100vh;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .form-control {
+    background-color: rgba(200, 200, 200, 0.9);
+  }
+  
