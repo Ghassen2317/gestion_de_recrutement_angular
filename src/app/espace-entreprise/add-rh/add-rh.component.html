@@ -1,58 +1,39 @@
-<div class="container-fluid" style="background-color: #008080; height: 100vh;">
-    <div class="row justify-content-center align-items-center" style="height: 100%;">
-      <div class="col-md-6">
-        <div class="card p-4" style="background-color: rgba(255, 255, 255, 0.7);"> <!-- Fond de la carte semi-transparent -->
-          <form [formGroup]="rhForm" (ngSubmit)="onSubmit()">
-            <!-- Prénom -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card form-container bg-gradient">
+        <div class="card-body">
+          <form [formGroup]="rhForm" (ngSubmit)="ngonSubmit()" class="p-4">
             <div class="mb-3">
-              <label for="firstName" class="form-label">Prénom :</label>
-              <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="Entrez le prénom de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+              <label for="firstName" class="form-label">Nom :</label>
+              <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="Enter your first name" required aria-describedby="firstNameHelp">
+              <div id="firstNameHelp" class="form-text"></div>
             </div>
-  
-            <!-- Nom -->
             <div class="mb-3">
-              <label for="lastName" class="form-label">Nom :</label>
-              <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Entrez le nom de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+              <label for="lastName" class="form-label">Prénom :</label>
+              <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Enter your last name" required aria-describedby="lastNameHelp">
+              <div id="lastNameHelp" class="form-text"></div>
             </div>
-  
-            <!-- Matricule -->
-            <div class="mb-3">
-              <label for="matricule" class="form-label">Matricule :</label>
-              <input type="text" id="matricule" formControlName="matricule" class="form-control" placeholder="Entrez la  matricule de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
-            </div>
-  
-            <!-- Email -->
+
             <div class="mb-3">
               <label for="email" class="form-label">Email :</label>
-              <input type="email" id="email" formControlName="email" class="form-control" placeholder="Entrez l'email de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
-            </div>
+              <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter your email address" required aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div> 
             <div class="mb-3">
-              <label for="entrepriseId" class="form-label">   Id:</label>
-              <input type="text" id="entrepriseId" formControlName="entrepriseId" class="form-control" placeholder="Entrez l'identifiant de l'employé" style="background-color: rgba(241, 233, 233, 0.9);">
+              <label for="entrepriseId" class="form-label">Entreprise ID :</label>
+              <input type="text" id="entrepriseId" formControlName="entrepriseId" class="form-control" placeholder="Enter your entreprise ID" required aria-describedby="entrepriseIdHelp">
+              <div id="entrepriseIdHelp" class="form-text"></div>
             </div>
-  
-            <!-- Mot de passe -->
             <div class="mb-3">
               <label for="motDePasse" class="form-label">Mot de passe :</label>
-              <input type="motDePasse" id="motDePasse" formControlName="motDePasse" class="form-control" placeholder="Entrez votre mot de passe" style="background-color: rgba(241, 233, 233, 0.9);">
+              <input type="password" id="motDePasse" formControlName="motDePasse" class="form-control" placeholder="Enter your password" required aria-describedby="motDePasseHelp">
+              <div id="motDePasseHelp" class="form-text"></div>
             </div>
-  
-            <!-- Bouton de soumission -->
-            <!-- <button type="submit" class="btn btn-primary">Ajouter RH</button>
-            <button type="button" class="btn btn-outline-info">Info</button> -->
-            <button type="button" class="btn btn-outline-primary">Ajouter RH</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-  
-
-
-
-
-
-
-
-
-
+</div>

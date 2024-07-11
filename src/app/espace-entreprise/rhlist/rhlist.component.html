@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liste de Responsable RH</title>
+  <!-- Stylesheets -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+    integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    integrity="sha384-Z2FjgCkpeC1nBMflJyZ5m0Jw6an/cPPIth2w/lKwp8rbfrg6FwBZoNMjhKXyF6+H"
+    crossorigin="anonymous"
+  />
+  <style>
+    body {
+      background-color: #008080;
+      color: rgb(160, 28, 28);
+    }
+    .card-title {
+      color: rgb(135, 163, 12);
+    }
+    .table thead th {
+      color: #008080;
+      background-color: white;
+    }
+    .table tbody td {
+      color: rgb(43, 42, 42);
+    }
+    .action-icons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: rgb(190, 238, 60);
+    }
+    .action-icons button i {
+      font-size: 1.2em;
+    }
+    .bx-plus {
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+    }
+    .bx-plus:hover {
+      color: #004d4d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <h5 class="card-title">
+            Liste de Responsable RH
+            <span class="text-muted fw-normal ms-2"></span>
+          </h5>
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <i
+          class="bx bx-plus"
+          routerLink="/add-rh"
+          title="Ajouter"
+          aria-label="Ajouter"
+        ></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="table-responsive">
+          <table
+            class="table project-list-table table-nowrap align-middle table-borderless"
+          >
+            <thead>
+              <tr>
+                <th scope="col"><strong>Nom :</strong></th>
+                <th scope="col"><strong>Prénom :</strong></th>
+                <th scope="col"><strong>Email :</strong></th>
+                <th scope="col"><strong>Entreprise :</strong></th>
+                <th scope="col"><strong>Mot de passe :</strong></th>
+                <th scope="col" style="width: 200px">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ formData.firstName }}</td>
+                <td>{{ formData.lastName }}</td>
+                <td>{{ formData.email }}</td>
+                <td>{{ formData.entrepriseId }}</td>
+                <td>{{ formData.motDePasse }}</td>
+                <td>
+                  <div class="action-icons">
+                    <button type="button" title="Update" aria-label="Update">
+                      <i class="bx bx-pencil"></i>
+                    </button>
+                    <button type="button" title="Delete" aria-label="Delete">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"
+    integrity="sha384-7dC2KL/wxPvZ4XPoPxiBra6B2DwISL3yu/R0zmkA3GOV2QOQFh8m0kRvGyoI6XJj"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

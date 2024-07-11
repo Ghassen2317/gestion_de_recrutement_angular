@@ -24,6 +24,11 @@ import { OfferListComponent } from './espace-candidat/espace-candidate/offers-li
 import { OfferFormComponent } from './espace-entreprise/offer-form/offer-form.component';
 import { OfferCardComponent } from './offer-card/offer-card.component';
 import {EspaceCandidateComponent} from './espace-candidat/espace-candidate/espace-candidate.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OfferService } from './services/offer.service';
+import { SignInService } from './services/sign-in.service';
+import { RhlistComponent } from './espace-entreprise/rhlist/rhlist.component';
+import { EntrepriselisteComponent } from './admin/entrepriseliste/entrepriseliste.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/offer-form', pathMatch: 'full' },
@@ -51,7 +56,9 @@ const routes: Routes = [
     OfferFilterComponent,
     OfferListComponent,
     OfferCardComponent,
-    EspaceCandidateComponent
+    EspaceCandidateComponent,
+    RhlistComponent,
+    EntrepriselisteComponent
   ],
   imports: [
     BrowserModule,
@@ -60,9 +67,11 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    RouterModule 
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [OfferService, SignInService],
+  
   bootstrap: [AppComponent]
 })
 

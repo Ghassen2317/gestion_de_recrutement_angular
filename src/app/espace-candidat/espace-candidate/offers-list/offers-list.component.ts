@@ -1,21 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { OfferService, Offer } from 'src/app/services/offer.service';
+
 
 @Component({
   selector: 'app-offer-list',
   templateUrl: './offers-list.component.html',
-  styleUrls: ['./offers-list.component.css']
+  styleUrls: ['./offers-list.component.css'],
 })
-export class OfferListComponent {
-  offers = [
-    { id: 1, title: 'Offre 1', description: 'Description de l\'offre 1' },
-    { id: 2, title: 'Offre 2', description: 'Description de l\'offre 2' },
-    { id: 3, title: 'Offre 3', description: 'Description de l\'offre 3' },
-    // Ajoutez autant d'offres que nécessaire
-  ];
-
-  constructor() { }
+export class OfferListComponent implements OnInit {
+  offers: Offer[] = [];
+  constructor(private offerService: OfferService) {}
 
   ngOnInit(): void {
-    // Vous pouvez laisser cette méthode vide pour une liste statique
+    this.loadOffers({});
+  }
+
+  loadOffers(filter: any) {
+    this.offerService.getFilteredOffres(filter).subscribe({
+      next: (data: Offer[]) => {
+        console.log("offers fetched", data);
+        
+        this.offers = data;
+      },
+      error: (error) => {
+        console.error('Error fetching offers', error);
+      },
+    });
+  }
+
+  onFilterChange(filter: any): void {
+    console.log("filter received", filter);
+    
+    this.loadOffers(filter);
   }
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./espace-entreprise.component.css']
 })
 export class EspaceEntrepriseComponent {
-
+  
 }

@@ -1,83 +1,147 @@
-<div class="container-fluid" style="background-color: #f1e9e9; height: 100vh;">
-  <div class="row justify-content-center align-items-center" style="height: 100%;">
-    <div class="col-md-6">
-      <div class="card p-4" style="background-color: rgba(255, 255, 255, 0.9);">
-        <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+<div class="container-fluid" style="background-color: #f1e9e9; height: 100vh">
+  <div
+    class="row justify-content-center align-items-center"
+    style="height: 100%"
+  >
+    <div class="col-md-6 n">
+      <div class="card p-4" style="background-color: rgba(255, 255, 255, 0.9)">
+        <form
+          [formGroup]="applicationForm"
+          (ngSubmit)="onSubmit()"
+          class="needs-validation"
+          novalidate
+        >
           <!-- First Name  -->
           <div class="form-group mb-1 custom-width">
             <label for="firstName" class="form-label">Nom:</label>
-            <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="Entrer votre nom">
+            <input
+              type="text"
+              id="firstName"
+              formControlName="firstName"
+              class="form-control"
+              placeholder="Entrer votre nom"
+              [ngClass]="{
+                'is-invalid':
+                  applicationForm.get('firstName')!.invalid &&
+                  (applicationForm.get('firstName')!.dirty ||
+                    applicationForm.get('firstName')!.touched)
+              }"
+            />
           </div>
 
-         
           <div class="form-group mb-1 custom-width">
             <label for="lastName" class="form-label">Prénom:</label>
-            <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Entrer votre prenom ">
+            <input
+              type="text"
+              id="lastName"
+              formControlName="lastName"
+              class="form-control"
+              placeholder="Entrer votre prenom "
+            />
           </div>
 
           <!-- Age -->
           <div class="form-group mb-1 custom-width">
             <label for="age" class="form-label">Age:</label>
-            <select id="age" formControlName="age" class="form-select">
-              <option *ngFor="let age of ages" [value]="age">{{ age }}</option>
-            </select>
+            <input
+              type="number"
+              id="age"
+              formControlName="age"
+              class="form-control"
+              placeholder="Entrer votre age"
+              min="18"
+              max="65"
+            />
           </div>
 
           <!-- Email -->
           <div class="form-group mb-1 custom-width">
             <label for="email" class="form-label">Email:</label>
-            <input type="email" id="email" formControlName="email" class="form-control" placeholder="Entrer votre  email">
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Entrer votre  email"
+            />
           </div>
 
           <!-- Sex -->
           <div class="form-group mb-1 custom-width">
             <label for="sexe" class="form-label">Sexe:</label>
             <select id="sexe" formControlName="sexe" class="form-select">
-              <option *ngFor="let sexe of sexes" [value]="sexes">{{ sexe }}</option>
+              <option *ngFor="let sexe of sexes" [value]="sexe">
+                {{ sexe }}
+              </option>
             </select>
           </div>
 
           <!-- Number of Years of Experience -->
           <div class="form-group mb-1 custom-width">
-            <label for="nbExperience" class="form-label">Years of Experience:</label>
-            <select id="nbExperience" formControlName="nbExperience" class="form-select">
-              <option *ngFor="let nbExperience of nbExperience" [value]="nbExperience">{{ nbExperience }}</option>
+            <label for="nbExperience" class="form-label"
+              >Years of Experience:</label
+            >
+            <select
+              id="nbExperience"
+              formControlName="nbExperience"
+              class="form-select"
+            >
+              <option
+                *ngFor="let nbExperience of nbExperience"
+                [value]="nbExperience"
+              >
+                {{ nbExperience }}
+              </option>
             </select>
           </div>
 
           <!-- Diploma -->
           <div class="form-group mb-1 custom-width">
-            <label for="diploma" class="form-label">Diploma:</label>
-            <select id="diploma" formControlName="diploma" class="form-select">
-              <option *ngFor="let diploma of diplomas" [value]="diplomas">{{ diploma }}</option>
+            <label for="diplome" class="form-label">Diploma:</label>
+            <select id="diploma" formControlName="diplome" class="form-select">
+              <option *ngFor="let diploma of diplomas" [value]="diploma">
+                {{ diploma }}
+              </option>
             </select>
           </div>
 
           <!-- CV Upload -->
           <div class="form-group mb-1 custom-width">
             <label for="curriculumVitae" class="form-label">CV:</label>
-            <input type="file" id="curriculumVitae" (change)="onFileChange($event, 'curriculumVitae')" class="form-control">
+            <input
+              type="file"
+              accept="application/pdf"
+              id="curriculumVitae"
+              (change)="onFileChange($event, 'curriculumVitae')"
+              class="form-control"
+              formControlName="curriculumVitae"
+            />
           </div>
 
           <!-- Cover Letter Upload -->
           <div class="form-group mb-1 custom-width">
-            <label for="lettreMotivation" class="form-label">Lettre de motivation:</label>
-            <input type="file" id="lettreMotivation" (change)="onFileChange($event, 'lettreMotivation')" class="form-control">
+            <label for="lettreMotivation" class="form-label"
+              >Lettre de motivation:</label
+            >
+            <input
+              type="file"
+              accept="application/pdf"
+              id="lettreMotivation"
+              (change)="onFileChange($event, 'lettreMotivation')"
+              class="form-control"
+              formControlName="lettreMotivation"
+            />
           </div>
           <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="applicationForm.invalid"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
   </div>
 </div>
-
-<style> -->
-  <!-- .mb-1 {
-    margin-bottom: 0.5rem !important; /* Ajustez cette valeur selon vos besoins */
-  }
-  .custom-width .form-control, 
-  .custom-width .form-select {
-    max-width: 90%; /* Ajustez cette valeur pour contrôler la largeur */
-  }
-</style>  

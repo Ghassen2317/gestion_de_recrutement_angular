@@ -19,7 +19,8 @@
 // offer-card.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Offer, OfferService } from '../services/offer.service';
 
 @Component({
   selector: 'app-offer-card',
@@ -27,12 +28,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./offer-card.component.css']
 })
 export class OfferCardComponent implements OnInit {
-  formData: any;
+  offer: Offer | any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private offerService: OfferService, private router: Router) { }
 
   ngOnInit(): void {
-    this.formData = history.state.formData;
+    const offerId = this.route.snapshot.paramMap.get('id');
+    if (offerId) {
+      this.offerService.getOfferById(offerId).subscribe((data: Offer) => {
+        this.offer = data;
+      });
   }
 }
 
+redirectToForm(offerId: string): void {
+  this.router.navigate(['/form'], { queryParams: { offerId: offerId } });
+}
+
+}

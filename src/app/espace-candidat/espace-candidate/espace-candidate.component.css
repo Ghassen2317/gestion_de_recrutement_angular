@@ -1,0 +1,9 @@
+.background-image {
+  background-image: url('/assets/images/listOffre.png');
+  background-size:contain; /* Ensures the image covers the entire div */
+  background-position:50% 50%; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Fixes the image to the viewport */
+  min-height: 100vh; /* Ensures the div is at least the height of the viewport */
+  padding: 20px; /* Adjust as needed to give some padding around your content */
+}

@@ -1,29 +1,9 @@
-<!-- <div class="sidebar p-4 bg-light text-dark rounded shadow-sm">
-  <div class="filter-box bg-white p-3 mb-3 rounded shadow-sm border">
-    <div class="form-group mb-3">
-      <label for="typeContrat" class="form-label text-primary">Type de Contrat</label>
-      <select id="typeContrat" class="form-select" (change)="onTypeContratChange($event)">
-        <option value="" disabled selected>Select type de contrat</option>
-        <option *ngFor="let type of typeContrats" [value]="type">{{ type }}</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="filter-box bg-white p-3 mb-3 rounded shadow-sm border">
-    <div class="form-group mb-3">
-      <label for="region" class="form-label text-primary">Région</label>
-      <select id="region" class="form-select" (change)="onRegionChange($event)">
-        <option value="" disabled selected>Select région</option>
-        <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
-      </select>
-    </div>
-  </div>
-</div> -->
-<div class="sidebar p-4 bg-light text-dark rounded shadow-sm">
+<div class="sidebar p-4 rounded shadow-sm" >
+  <h3 style="color: black; font-family: inter;">Filter</h3>
   <!-- Filter for Type de Contrat -->
-  <div class="filter-box bg-white p-3 mb-3 rounded shadow-sm border">
+  <div class="filter-box  p-3 mb-3 ">
     <div class="form-group mb-3">
-      <label for="typeContrat" class="form-label text-primary">Type de Contrat</label>
+      <label for="typeContrat" class="form-label ">Type de Contrat</label>
       <select id="typeContrat" class="form-select" (change)="onTypeContratChange($event)">
         <option value="" disabled selected>Sélectionner un type de contrat</option>
         <option *ngFor="let type of typeContrats" [value]="type">{{ type }}</option>
@@ -32,9 +12,9 @@
   </div>
 
   <!-- Filter for Région -->
-  <div class="filter-box bg-white p-3 mb-3 rounded shadow-sm border">
+  <div class="filter-box  p-3 mb-3  ">
     <div class="form-group mb-3">
-      <label for="region" class="form-label text-primary">Région</label>
+      <label for="region" class="form-label ">Région</label>
       <select id="region" class="form-select" (change)="onRegionChange($event)">
         <option value="" disabled selected>Sélectionner une région</option>
         <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
@@ -43,9 +23,9 @@
   </div>
 
   <!-- Filter for Nombre d'années d'expérience -->
-  <div class="filter-box bg-white p-3 mb-3 rounded shadow-sm border">
+  <div class="filter-box  p-3 mb-3 ">
     <div class="form-group mb-3">
-      <label for="nbExperienceOffre" class="form-label text-primary">Nombre d'années d'expérience</label>
+      <label for="nbExperienceOffre" class="form-label ">Nombre d'années d'expérience</label>
       <select id="nbExperienceOffre" class="form-select" (change)="onNbExperienceChange($event)">
         <option value="" disabled selected>Sélectionner le nombre d'années d'expérience</option>
         <option value="0-1">0-1 an</option>
@@ -56,9 +36,9 @@
   </div>
 
   <!-- Filter for Diplôme -->
-  <div class="filter-box bg-white p-3 mb-3 rounded shadow-sm border">
+  <div class="filter-box  p-3 mb-3">
     <div class="form-group mb-3">
-      <label for="diplome" class="form-label text-primary">Diplôme</label>
+      <label for="diplome" class="form-label ">Diplôme</label>
       <select id="diplome" class="form-select" (change)="onDiplomeChange($event)">
         <option value="" disabled selected>Sélectionner le diplôme</option>
         <option value="Bac">Bac</option>
@@ -69,5 +49,4 @@
     </div>
   </div>
 
-  <!-- Add more filter boxes here as needed -->
 </div>

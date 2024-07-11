@@ -17,7 +17,7 @@ export class DashboardComponent  {
   // Bar chart
   barChart=new Chart({
     chart: {
-      type: 'bar',
+      type: 'column',
       backgroundColor:'#ffffff42',
     },
     title: {
@@ -64,7 +64,7 @@ export class DashboardComponent  {
     title: {
       verticalAlign: 'middle',
       floating: true,
-      text: 'Sexe',
+      text: 'Sexe des Candidats',
     },
   
     legend: {
@@ -75,11 +75,6 @@ export class DashboardComponent  {
       {
         type: 'pie',
         data: [
-          // { name: 'COVID 19', y: 1, color: '#eeeeee' },
-  
-          // { name: 'HIV/AIDS', y: 2, color: '#393e46' },
-  
-          // { name: 'EBOLA', y: 3, color: '#00adb5' },
           { name: 'Femme', y: 1, color: '#008080' },
           { name: 'Homme', y: 2, color: '#ffc600' },
         ],

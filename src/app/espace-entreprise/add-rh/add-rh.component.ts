@@ -1,32 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-rh',
   templateUrl: './add-rh.component.html',
-  styleUrls: ['./add-rh.component.css']
+  styleUrls: ['./add-rh.component.css'],
 })
-export class AddRhComponent implements OnInit {
+export class AddRhComponent {
   rhForm: FormGroup;
+  rhList: any[] = []; // Liste locale pour stocker les RH
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.rhForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      matricule: ['', Validators.required],
+
       email: ['', [Validators.required, Validators.email]],
-      entrepriseId:['', Validators.required],
-      motDePasse: ['', [Validators.required, Validators.minLength(6)]]
+      entrepriseId: ['', Validators.required],
+      motDePasse: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
-  ngOnInit(): void {}
+  // ngOnInit(): void {}
 
-  onSubmit(): void {
-    if (this.rhForm.valid) {
-      console.log(this.rhForm.value);
-      // Ici, vous pouvez ajouter la logique pour soumettre les données à votre backend
-      // Par exemple, en utilisant un service Angular pour appeler une API
+  ngonSubmit(): void {
+    if (this.rhForm.value) {
+      // Envoyer les données au backend ou traiter localement
+      console.log(this.rhForm.valid);
+      const formData = this.rhForm.value;
+      this.router.navigate(['/rh-list'], { state: { formData } });
     }
   }
 }

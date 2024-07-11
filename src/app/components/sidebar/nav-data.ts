@@ -20,7 +20,7 @@ export const navbarData= [
         label:'profils acceptés' 
     },
     {
-        routelink:"/home",
+        routelink:"javascript:void(0)",
         icon:'bi bi-box-arrow-left',
         label:'Se déconnecter' 
     }

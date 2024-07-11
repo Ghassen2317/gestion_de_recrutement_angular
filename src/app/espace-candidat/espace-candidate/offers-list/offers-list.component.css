@@ -1,28 +1,11 @@
-/* .filter-container {
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .filter-container .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .filter-container .form-control {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-  } */
-
+/* 
   .container{
     display: flex;
   }
 
   .filter {
     margin-left: 200px;
-    /* margin-right: 20px;  */
+
   }
   .offer-list {
     display: flex;
@@ -49,4 +32,118 @@
   .card p {
     color: #555;
   }
+   */
+
+
+   .container {
+    display: flex;
+  }
   
+  .filter {
+    margin-left: 200px;
+  }
+  
+  .offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 100px;
+    margin-left: 180px;    
+  }
+  
+  .card {
+    background: rgba(236, 235, 235, 0.847);
+    border: 1px solid #ffc600;
+    border-radius: 15px;
+    padding: 16px;
+    width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+    
+  .job-info {
+    flex-grow: 1;
+    margin-left: 16px;
+  }
+  
+  .job-info h2 {
+    margin: 0;
+    font-size: 20px;
+    font-family: inter;
+    font-weight: bold;
+  }
+  
+  .company {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    font-family: inter;
+  }
+    
+  .job-details {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 16px;
+  }
+ 
+  
+  .job-details span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .job-details span:not(:last-child) {
+    margin-right: 16px;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  .job-salary {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    .bi{
+      color: #008080;
+    }
+    
+  }
+
+  
+  .apply-btn {
+    margin-left: 500px;
+    background-color: #008080;
+    color:  rgb(236, 235, 235);
+    border: none;
+    padding: 12px 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: inter;
+    
+  }
+  
+  .apply-btn:hover {
+    background-color: #00808085;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  img{
+    margin-top: -30px;
+    margin-left: 100px;
+    position: fixed;
+    width: 90vh;
+  }

@@ -1,20 +1,20 @@
 .sidebar {
-  width: 250px;
+  width: 400px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  background-color: #97c3f3;
-  color: #ffffff;
+  background-color: rgba(236, 235, 235, 0.703);
+  color: rgba(236, 235, 235, 0.703);
   margin-top: 60px;
- 
 }
 
 .filter-box {
-  background-color: #e8f2f7; /* Secondary background color */
-  color: #ffffff; /* Text color */
+  background-color: rgb(236, 235, 235);
+
+  color: #ffffff;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -22,4 +22,20 @@
 
 .form-group {
   margin-bottom: 1rem;
+}
+
+label {
+  color: black;
+  font-family: inter;
+  font-weight: bold;
+}
+.form-select {
+  background-color: rgba(255, 255, 255, 0.482);
+  border-color: #ffc600;
+  border-radius: 20px;
+  font-family: inter;
+  color: gray;
+}
+.form-select:hover {
+  color: #ffc600;
 }

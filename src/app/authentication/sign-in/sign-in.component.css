@@ -24,15 +24,13 @@ body {
 }
 
 .area {
-    background: linear-gradient(to left, #c5cfee, #008080); /* Bleu-vert chic */
+    background: linear-gradient(to left, #008080, #ffc80097); /* Bleu-vert chic */
     width: 100%;
     height: 100vh;
 }
 
 .bg-glass {
-    
-        background-color: rgba(230, 230, 220, 0) !important; /* Fully transparent */
-    
+    background-color: rgba(230, 230, 220, 0) !important; /* Fully transparent */
 }
 
 .circles {
@@ -55,11 +53,32 @@ body {
     bottom: -150px;
 }
 
+.btn {
+    color: #dfdfdf;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+label {
+    color: #dfdfdf;
+    font-weight: bold;
+}
+
+.background-radial-gradient {
+    margin-top: -48px;
+}
+
 .circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
     animation-delay: 0s;
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.268);
+    border-color: rgba(0, 0, 0, 0.268);
+    color: #ffc600;
 }
 
 .circles li:nth-child(2) {
@@ -143,3 +162,15 @@ body {
     }
 }
 
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.25);
+}

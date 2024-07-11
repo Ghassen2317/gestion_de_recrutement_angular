@@ -14,6 +14,7 @@ import { OfferFilterComponent } from './espace-candidat/espace-candidate/offer-f
 import { OfferListComponent } from './espace-candidat/espace-candidate/offers-list/offers-list.component';
 import { OfferCardComponent } from './offer-card/offer-card.component';
 import { EspaceCandidateComponent } from './espace-candidat/espace-candidate/espace-candidate.component';
+import { RhlistComponent } from './espace-entreprise/rhlist/rhlist.component';
 const routes: Routes = [
   { path: 'sign-in', component: SigninComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path:"home",component :HomePageComponent},
   {path:"add-rh",component :AddRhComponent},
+  {path:"rhlist",component :RhlistComponent},
   {path:"form",component :FormComponent},
   {path:"offer-filter",component :OfferFilterComponent},
   {path:"offers-list",component :OfferListComponent},
@@ -32,7 +34,8 @@ const routes: Routes = [
   // ]},
   {path:"offerForm" ,component :OfferFormComponent},
   {path:"offerCard" ,component :OfferCardComponent},
-  {path:"dashboard" ,component:DashboardComponent}
+  {path:"dashboard" ,component:DashboardComponent},
+  {path:'offer/:id' ,component:OfferCardComponent}
   
 ];
 

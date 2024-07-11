@@ -1,36 +1,37 @@
-<!-- <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-3">
-        <app-offer-filter (typeContratSelected)="filterByTypeContrat($event)"></app-offer-filter>
-         D'autres filtres comme filter-by-region peuvent être ajoutés ici -->
-      <!-- </div>  -->
-      <!-- <div class="col-md-9">
-        <div class="card">
-          <div class="card-header">
-            <h5>Offres d'Emploi</h5>
-          </div>
-          <div class="card-body">
-            <ul class="list-group">
-              <li *ngFor="let offer of filteredOffers" class="list-group-item">
-                <h5>{{ offer.nomOffreEmploi }}</h5>
-                <p>{{ offer.nomEntreprise }} - {{ offer.typeContrat }}</p>
-                 Vous pouvez ajouter d'autres détails de l'offre ici -->
-              <!-- </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 <div class="container">
   <div class="filter">
-    <app-offer-filter></app-offer-filter>
+    <app-offer-filter (filterChange)="onFilterChange($event)"></app-offer-filter>
   </div>
-  <div class="offer-list" >
-    <div *ngIf="offers && offers.length > 0; else noOffers" >
-      <div *ngFor="let offer of offers" class="card" >
-        <h2>{{ offer.title }}</h2>
+  <div class="offer-list">
+    <div *ngIf="offers && offers.length > 0; else noOffers">
+      <div *ngFor="let offer of offers" class="card">
+        <div class="card-header">
+          <div class="job-info">
+            <h2>{{ offer.nomOffreEmploi }}</h2>
+            <span class="company">{{ offer.nomEntreprise }}</span>
+          </div>
+          
+        </div>
+        <div class="job-details">
+          <div class="job-type">
+            <span><i class="bi bi-pen" style="margin-right: 10px;"></i>{{offer.typeContrat}}</span>
+          </div>
+          <div class="experience">
+            <span><i class="bi bi-briefcase" style="margin-right: 10px;"></i>{{offer.nbExperienceOffre}}</span>
+          </div>
+          <div class="location">
+            <span><i class="bi bi-geo-alt" style="margin-right: 10px;"></i>{{offer.region}}</span>
+          </div>
+          <div class="posted-date">
+            <span>{{ offer.datePublication | date }}</span>
+          </div>
+        </div>
         <p>{{ offer.description }}</p>
+        <div class="job-salary">
+          <span><i class="bi bi-currency-exchange "style="margin-right: 10px; "></i>$30k-40k / Mois</span>
+          <button class="apply-btn" [routerLink]="['/offer', offer.id]">Détails</button>
+        </div>
+        
       </div>
     </div>
     <ng-template #noOffers>
